@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expertise CI - Farihane & Soundous</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root { --pink-main: #ff4da6; --pink-light: #ffe6f0; --text-dark: #333; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background: #fff5f8; color: var(--text-dark); line-height: 1.6; }
+        header { background: linear-gradient(135deg, #ff4da6 0%, #ff99cc 100%); color: white; text-align: center; padding: 60px 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .container { max-width: 1000px; margin: -40px auto 40px; padding: 20px; }
+        section { background: white; padding: 35px; margin-bottom: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(255,105,180,0.15); border: 1px solid var(--pink-light); }
+        h2 { color: #cc0066; font-size: 1.8rem; border-left: 5px solid var(--pink-main); padding-left: 15px; margin-top: 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .card { background: var(--pink-light); padding: 20px; border-radius: 12px; border: 1px solid #ffcce0; }
+        .card h3 { margin-top: 0; color: #b30059; font-size: 1.1rem; }
+        .badge { background: var(--pink-main); color: white; padding: 3px 10px; border-radius: 10px; font-size: 0.8rem; font-weight: bold; }
+        button { padding: 12px 25px; border: none; background: var(--pink-main); color: white; border-radius: 25px; cursor: pointer; font-weight: bold; transition: 0.3s; box-shadow: 0 4px 10px rgba(255,77,166,0.3); }
+        button:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(255,77,166,0.4); }
+        .lang-switch { position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.2); border: 1px solid white; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 2px solid var(--pink-light); border-radius: 10px; font-size: 1rem; }
+        .ar { display: none; direction: rtl; text-align: right; }
+        [lang="ar"] .ar { display: block; }
+        [lang="ar"] .fr { display: none; }
+    </style>
+</head>
+<body lang="fr">
+
+<header>
+    <button class="lang-switch" onclick="toggleLang()">Français / العربية</button>
+    <h1 class="fr">Cystite Interstitielle</h1>
+    <h1 class="ar">البروتوكول السريري: التهاب المثانة الخلالي</h1>
+    <p class="fr">Développement : <strong>Farihane Boumekhila</strong> & <strong>Soundous Boukerfa</strong><br>Étudiantes en 3ème année Kinésithérapie</p>
+    <p class="ar">إعداد: <strong>فريحان بومخيلة</strong> و <strong>سندس بوكرفة</strong><br>طالبات السنة الثالثة في العلاج الفيزيائي</p>
+</header>
+ <section>
+        <h2 class="fr">🌸 Le saviez-vous ?</h2>
+        <h2 class="ar">🌸 هل تعلمين؟</h2>
+        <p class="fr">Votre vessie est un muscle qui réagit à vos émotions et à votre respiration. Apprendre à la détendre est la première étape pour aller mieux.</p>
+        <p class="ar">مثانتك هي عضلة تتفاعل مع عواطفك وتنفسك. تعلم كيفية إرخائها هو الخطوة الأولى للشعور بالتحسن.</p>
+    </section>
+
+<div class="container">
+
+    <section>
+        <h2 class="fr">I. Analyse Physiopathologique</h2>
+        <h2 class="ar">1. التحليل الفسيولوجي المرضي</h2>
+        <p class="fr">La CI n'est pas une simple infection, c'est une <strong>dysfonction neuro-musculaire</strong>.</p>
+        <p class="ar">التهاب المثانة الخلالي ليس مجرد عدوى، بل هو <strong>خلل عصبي عضلي</strong>.</p>
+        <div class="grid">
+            <div class="card fr">
+                <h3>Sensibilisation Centrale</h3>
+                <ul>
+                    <li>Amplification des signaux de douleur par le cerveau.</li>
+                    <li>Le système nerveux reste en mode "alerte".</li>
+                    <li>Diminution du seuil de tolérance à la distension vésicale.</li>
+                </ul>
+            </div>
+            <div class="card ar">
+                <h3>الحساسية المركزية</h3>
+                <ul>
+                    <li>تضخيم إشارات الألم عن طريق الدماغ.</li>
+                    <li>الجهاز العصبي يظل في وضع "الإنذار".</li>
+                    <li>انخفاض عتبة تحمل تمدد المثانة.</li>
+                </ul>
+            </div>
+            <div class="card fr">
+                <h3>Le Rôle du Périnée</h3>
+                <ul>
+                    <li>Hypertonie protectrice des muscles élévateurs de l'anus.</li>
+                    <li>Points gâchettes (Trigger Points) myofasciaux.</li>
+                    <li>Congestion pelvienne associée.</li>
+                </ul>
+            </div>
+            <div class="card ar">
+                <h3>دور عضلات الحوض</h3>
+                <ul>
+                    <li>تشنج حماية في العضلات الرافعة للشرج.</li>
+                    <li>نقاط الألم العضلي الليفي.</li>
+                    <li>احتقان الحوض المصاحب.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="fr">II. Guide Nutritionnel & pH-mètrie</h2>
+        <h2 class="ar">2. الدليل الغذائي ودرجة الحموضة</h2>
+        <div class="card">
+            <p class="fr"><strong>Objectif :</strong> Réduire l'agression chimique sur les parois de la vessie (Glucosaminoglycanes).</p>
+            <p class="ar"><strong>الهدف:</strong> تقليل التهيج الكيميائي لجدار المثانة.</p>
+        </div>
+        <div class="grid">
+            <div class="fr">
+                <span class="badge">❌ À ÉVITER ABSOLUMENT</span>
+                <ul>
+                    <li><strong>Acides :</strong> Citron, vinaigre, tomates cuites.</li>
+                    <li><strong>Excitants :</strong> Caféine, théine, alcool (irritants nerveux).</li>
+                    <li><strong>Artificiels :</strong> Aspartame, conservateurs, colorants.</li>
+                    <li><strong>Épices :</strong> Piment, poivre fort.</li>
+                </ul>
+            </div>
+            <div class="ar">
+                <span class="badge">❌ يجب تجنبه تماماً</span>
+                <ul>
+                    <li><strong>الأحماض:</strong> الليمون، الخل، الطماطم المطبوخة.</li>
+                    <li><strong>المنبهات:</strong> الكافيين، الشاي، الكحول.</li>
+                    <li><strong>الاصطناعي:</strong> المحليات الاصطناعية، المواد الحافظة.</li>
+                    <li><strong>التوابل:</strong> الفلفل الحار.</li>
+                </ul>
+            </div>
+            <div class="fr">
+                <span class="badge">✅ RECOMMANDÉ</span>
+                <ul>
+                    <li><strong>Hydratation :</strong> Eau à faible minéralité (1.5L-2L).</li>
+                    <li><strong>Alcalinisants :</strong> Légumes verts, poire, amandes.</li>
+                    <li><strong>Protéines douces :</strong> Œufs, poulet, poisson blanc.</li>
+                </ul>
+            </div>
+            <div class="ar">
+                <span class="badge">✅ الموصى به</span>
+                <ul>
+                    <li><strong>الترطيب:</strong> ماء منخفض المعادن (1.5-2 لتر).</li>
+                    <li><strong>القلويات:</strong> الخضروات الخضراء، الإجاص، اللوز.</li>
+                    <li><strong>البروتينات:</strong> البيض، الدجاج، السمك الأبيض.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+        <!-- EXERCICES -->
+<section>
+<h2 class="fr">Exercices kinésithérapiques</h2>
+<h2 class="ar">تمارين العلاج الطبيعي</h2>
+
+<div class="card fr">
+<strong>1. Respiration diaphragmatique :</strong><br>
+Allongée, main sur le ventre. Inspirer 4 sec → expirer 6 sec.<br>
+✔ Diminue la douleur (active parasympathique)
+</div>
+
+<div class="card ar">
+<strong>1. التنفس البطني :</strong><br>
+شهيق 4 ثواني وزفير 6 ثواني<br>
+✔ يقلل الألم
+</div>
+
+<div class="card fr">
+<strong>2. Relâchement du périnée :</strong><br>
+Imaginer une ouverture à l’expiration.<br>
+❌ Ne pas contracter !
+</div>
+
+<div class="card ar">
+<strong>2. إرخاء الحوض :</strong><br>
+تخيلي فتح العضلات أثناء الزفير
+</div>
+
+<div class="card fr">
+<strong>3. Étirement des hanches :</strong><br>
+Position papillon 30 sec.<br>
+✔ Diminue tension pelvienne
+</div>
+
+<div class="card ar">
+<strong>3. تمارين الإطالة :</strong><br>
+وضعية الفراشة
+</div>
+
+<div class="card fr">
+<strong>4. Posture de l’enfant :</strong><br>
+Relaxation globale + respiration lente
+</div>
+
+<div class="card ar">
+<strong>4. وضعية الطفل :</strong><br>
+استرخاء كامل
+</div>
+
+</section>
+
+<!-- CONSEILS -->
+<section>
+<h2 class="fr">Conseils essentiels pour la patiente</h2>
+<h2 class="ar">نصائح مهمة للمريضة</h2>
+
+<div class="card fr">
+<ul>
+<li>Ne jamais retenir les urines</li>
+<li>Éviter le stress (très important)</li>
+<li>Utiliser la chaleur (bouillotte)</li>
+<li>Porter des vêtements larges</li>
+<li>Faire les exercices régulièrement</li>
+</ul>
+</div>
+
+<div class="card ar">
+<ul>
+<li>عدم حبس البول</li>
+<li>تجنب التوتر</li>
+<li>استعمال الحرارة</li>
+<li>ملابس مريحة</li>
+<li>التمارين بانتظام</li>
+</ul>
+</div>
+</section>
+
+    <section>
+        <h2 class="fr">III. Protocole chez vous (30 Jours)</h2>
+        <h2 class="ar">3. بروتوكول في المنزل (30 يومًا)</h2>
+        <div class="card">
+            <h3 class="fr">Semaines 1-2 : Phase de Désensibilisation</h3>
+            <h3 class="ar">الأسبوع 1-2: مرحلة إلغاء الحساسية</h3>
+            <ul class="fr">
+                <li><strong>Respiration Diaphragmatique :</strong> 3 cycles de 5 min/jour. Relâchement du plancher pelvien à l'inspiration.</li>
+                <li><strong>Thermothérapie :</strong> Application de chaleur douce sur la zone sus-pubienne (20 min).</li>
+                <li><strong>Hygiène mictionnelle :</strong> Ne pas pousser pour uriner, attendre le besoin réel.</li>
+            </ul>
+            <ul class="ar">
+                <li><strong>التنفس الحجابي:</strong> 3 دورات لمدة 5 دقائق يوميًا. إرخاء الحوض عند الشهيق.</li>
+                <li><strong>العلاج الحراري:</strong> وضع حرارة خفيفة فوق منطقة العانة (20 دقيقة).</li>
+                <li><strong>عادات التبول:</strong> عدم الدفع أثناء التبول، انتظار الحاجة الحقيقية.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3 class="fr">Semaines 3-4 : Phase de Mobilité & Autonomie</h3>
+            <h3 class="ar">الأسبوع 3-4: مرحلة الحركة والاستقلالية</h3>
+            <ul class="fr">
+                <li><strong>Étirements Myofasciaux :</strong> Posture de l'enfant (Child's Pose), étirement des adducteurs et psoas.</li>
+                <li><strong>Gestion du Stress :</strong> Techniques de cohérence cardiaque pour réguler le nerf vague.</li>
+                <li><strong>Reprogrammation Vésicale :</strong> Augmenter progressivement l'intervalle entre les mictions.</li>
+            </ul>
+            <ul class="ar">
+                <li><strong>الإطالة العضلية:</strong> وضعية الطفل، إطالة عضلات الورك.</li>
+                <li><strong>إدارة التوتر:</strong> تقنيات ضبط التنفس لتنظيم العصب المبهم.</li>
+                <li><strong>إعادة برمجة المثانة:</strong> زيادة الفاصل الزمني بين مرات التبول تدريجيًا.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="fr">IV. Monitoring & Dashboard</h2>
+        <h2 class="ar">4. المراقبة ولوحة التحكم</h2>
+        <div class="grid">
+            <div>
+                <label class="fr">Score de Douleur (EVA 0-10)</label>
+                <label class="ar">مستوى الألم (0-10)</label>
+                <input type="number" id="pain" min="0" max="10" placeholder="Ex: 5">
+                
+                <label class="fr">Nombre de mictions / 24h</label>
+                <label class="ar">عدد مرات التبول / 24 ساعة</label>
+                <input type="number" id="freq" placeholder="Ex: 12">
+                
+                <label class="fr">Volume hydrique absorbé (L)</label>
+                <label class="ar">كمية السوائل المستهلكة (لتر)</label>
+                <input type="number" id="water" step="0.1" placeholder="Ex: 1.5">
+
+                <button onclick="saveAndAnalyze()" style="width: 100%; margin-top: 20px;">
+                    <span class="fr">Enregistrer les données</span>
+                    <span class="ar">حفظ البيانات</span>
+                </button>
+            </div>
+            <div id="clinicalFeedback" style="display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold; padding: 20px; border: 2px dashed var(--pink-main); border-radius: 12px;">
+                <span class="fr">Entrez vos données pour recevoir l'analyse clinique.</span>
+                <span class="ar">أدخل بياناتك للحصول على التحليل السريري.</span>
+            </div>
+        </div>
+        <canvas id="mainChart" style="margin-top: 30px; max-height: 300px;"></canvas>
+    </section>
+
+</div>
+
+<script>
+    let db = JSON.parse(localStorage.getItem("ci_clinical_data")) || [];
+    let chart;
+
+    function toggleLang() {
+        document.body.lang = (document.body.lang === "fr") ? "ar" : "fr";
+    }
+
+    function saveAndAnalyze() {
+        const p = document.getElementById("pain").value;
+        const f = document.getElementById("freq").value;
+        const w = document.getElementById("water").value;
+
+        if(!p || !f) return alert("Veuillez remplir les champs principaux.");
+
+        const entry = { date: new Date().toLocaleDateString(), pain: parseInt(p), freq: parseInt(f), water: parseFloat(w) };
+        db.push(entry);
+        localStorage.setItem("ci_clinical_data", JSON.stringify(db));
+
+        updateClinicalChart();
+        generateFeedback(entry);
+    }
+
+    function generateFeedback(data) {
+        const div = document.getElementById("clinicalFeedback");
+        let msgFr = "";
+        let msgAr = "";
+
+        if(data.pain > 7) {
+            msgFr = "🔴 Crise aiguë : Priorité au repos pelvien, chaleur et respiration diaphragmatique lente.";
+            msgAr = "🔴 أزمة حادة: الأولوية لراحة الحوض، الحرارة، والتنفس البطني البطيء.";
+        } else if (data.freq > 15) {
+            msgFr = "⚠️ Pollakiurie élevée : Vérifiez si vous avez consommé des irritants (café, épices).";
+            msgAr = "⚠️ تكرار التبول مرتفع: تأكدي من عدم تناول مهيجات (قهوة، توابل).";
+        } else {
+            msgFr = "🟢 État stable : Continuez vos exercices d'étirement et l'hydratation régulière.";
+            msgAr = "🟢 حالة مستقرة: استمري في تمارين الإطالة والترطيب المنتظم.";
+        }
+        div.innerHTML = `<p class="fr">${msgFr}</p><p class="ar">${msgAr}</p>`;
+    }
+
+    function updateClinicalChart() {
+        const ctx = document.getElementById('mainChart').getContext('2d');
+        if(chart) chart.destroy();
+        
+        chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: db.map(e => e.date),
+                datasets: [{
+                    label: 'Douleur (EVA)',
+                    data: db.map(e => e.pain),
+                    borderColor: '#ff4da6',
+                    backgroundColor: 'rgba(255, 77, 166, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: { responsive: true, scales: { y: { min: 0, max: 10 } } }
+        });
+    }
+
+    window.onload = updateClinicalChart;
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Espace Bien-être Pelvien</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root { --soft-pink: #ff85c0; --bg-color: #fff9fb; --text-color: #4a4a4a; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text-color); }
+        
+        header { background: linear-gradient(135deg, #ff85c0 0%, #feb47b 100%); color: white; text-align: center; padding: 50px 20px; border-bottom-left-radius: 50px; border-bottom-right-radius: 50px; }
+        
+        .container { max-width: 800px; margin: 20px auto; padding: 20px; }
+        
+        section { background: white; padding: 30px; margin-bottom: 25px; border-radius: 25px; box-shadow: 0 10px 20px rgba(255,133,192,0.1); border: 1px solid #ffeef5; }
+        
+        h2 { color: #d4378d; display: flex; align-items: center; gap: 10px; }
+        
+        .tip-card { background: #fff0f6; border-radius: 15px; padding: 20px; margin: 15px 0; border-left: 5px solid var(--soft-pink); }
+        
+        .btn-main { background: var(--soft-pink); color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 18px; cursor: pointer; width: 100%; transition: 0.3s; box-shadow: 0 5px 15px rgba(255,133,192,0.3); }
+        .btn-main:hover { background: #f759ab; }
+        
+        .lang-toggle { background: rgba(255,255,255,0.3); border: 1px solid rgba(255, 255, 255, 0); color: rgba(255, 255, 255, 0); padding: 8px 15px; border-radius: 20px; cursor: pointer; margin-bottom: 20px; }
+
+        input, select { width: 100%; padding: 12px; margin: 10px 0; border-radius: 12px; border: 1px solid #ffd6e7; font-size: 16px; outline: none; }
+        
+        .ar { display: none; direction: rtl; text-align: right; }
+        [lang="ar"] .ar { display: block; }
+        [lang="ar"] .fr { display: none; }
+        
+        .status-light { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; }
+    </style>
+</head>
+<body lang="fr">
+
+<header>
+
+<div class="container">
+   
+</script>
+
+</body>
+</html>
